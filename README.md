@@ -1,16 +1,84 @@
-# React + Vite
+# 🏃‍♂️ React Infinite Runner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast-paced, physics-based infinite runner game built from scratch using **React 19** and **Vite**. Test your reflexes, dodge obstacles, and see how long you can survive as the game speed progressively increases!
 
-Currently, two official plugins are available:
+![Game Preview](https://via.placeholder.com/800x400?text=Gameplay+Screenshot+Placeholder)
+*(Replace this link with an actual screenshot of your game)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎮 Features
 
-## React Compiler
+*   **Physics Engine**: Custom-built gravity and velocity simulation using React state (`useEffect` & `setInterval`).
+*   **Procedural Obstacles**: Obstacles spawn and move continuously, ensuring no two runs are exactly the same.
+*   **Dynamic Difficulty**: The game creates a challenge by increasing speed automatically as your score goes up.
+*   **Collision Detection**: Real-time bounding-box collision detection to ensure precise hitboxes.
+*   **Score Tracking**: Live scoring system that rewards survival time.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+*   **[React](https://react.dev/)**: Component-based UI and state management.
+*   **[Vite](https://vitejs.dev/)**: Next-generation frontend tooling for fast builds and HMR.
+*   **CSS3**: Custom styling for game entities and animations.
+*   **ESLint**: Code quality and best practices.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
+
+Follow these steps to get the game running locally on your machine.
+
+### Prerequisites
+
+Make sure you have **Node.js** installed on your system.
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/runner-game.git
+    cd runner-game
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in Browser:**
+    Click the URL shown in the terminal (usually `http://localhost:5173`) to start playing!
+
+## 🕹️ How to Play
+
+1.  **Start the Game**: The game begins immediately (or upon refresh).
+2.  **Jump**: Press the **`Spacebar`** to make the green cube jump.
+3.  **Dodge**: Avoid the red obstacles moving towards you.
+4.  **Survive**: The longer you run, the higher your score — and the faster the obstacles move!
+5.  **Game Over**: If you crash, click the **Restart** button to try again.
+
+## 📂 Project Structure
+
+```bash
+runner-game/
+├── public/              # Static assets
+├── src/
+│   ├── App.css          # Game styling and animations
+│   ├── App.jsx          # Main game logic (Physics, Rendering, State)
+│   ├── main.jsx         # Entry point
+│   └── index.css        # Global styles
+├── index.html           # HTML template
+├── package.json         # Dependencies and scripts
+└── vite.config.js       # Vite configuration
+```
+
+## 🧠 What I Learned
+
+This project was an experiment to build a game loop inside React's render cycle. Key takeaways include:
+*   Managing **Intervals** and **Side Effects** in `useEffect`.
+*   Optimizing state updates for 60FPS performance.
+*   Implementing basic **AABB (Axis-Aligned Bounding Box)** collision detection logic manually.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
